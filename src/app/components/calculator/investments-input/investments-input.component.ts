@@ -1,5 +1,5 @@
 import { CurrencyPipe } from '@angular/common'
-import { Component, inject, output, signal } from '@angular/core'
+import { Component, inject, signal } from '@angular/core'
 import { FormsModule } from '@angular/forms'
 import Investments from '../../../models/investments'
 import { CalculatorService } from '../calculator.service'
@@ -8,7 +8,6 @@ import { CalculatorService } from '../calculator.service'
   selector: 'app-investments-input',
   standalone: true,
   imports: [FormsModule, CurrencyPipe],
-  providers: [CurrencyPipe],
   templateUrl: './investments-input.component.html',
   styleUrl: './investments-input.component.css',
 })
