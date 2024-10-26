@@ -3,14 +3,14 @@ header {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  padding-top: 3rem;
 }
 
 img {
-  max-width: 150px;
+  max-width: 5rem;
   object-fit: contain;
 }
 
 h1 {
-  color: #eee;
   font-size: 1.5rem;
 }
