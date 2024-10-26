@@ -1,0 +1,16 @@
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+img {
+  max-width: 150px;
+  object-fit: contain;
+}
+
+h1 {
+  color: #eee;
+  font-size: 1.5rem;
+}
