@@ -1,24 +1,22 @@
-<section>
-  <form (ngSubmit)="onSubmit()">
-    <div class="inputGroup">
-      <p>
-        <label for="initialInvestment">Investimento inicial (R$)</label>
-        <input type="number" name="initialInvestment" id="initialInvestment" [(ngModel)]="initialInvestment" />
-      </p>
-      <p>
-        <label for="monthlyInvestment">Aporte mensal (R$)</label>
-        <input type="number" name="monthlyInvestment" id="monthlyInvestment" [(ngModel)]="monthlyInvestment" />
-      </p>
-      <p>
-        <label for="interestRate">Taxa de juros (%)</label>
-        <input type="number" name="interestRate" id="interestRate" [(ngModel)]="interestRate" />
-      </p>
-      <p>
-        <label for="duration">Período (anos)</label>
-        <input type="number" name="duration" id="duration" [(ngModel)]="duration" />
-      </p>
-    </div>
+<form (ngSubmit)="onSubmit()">
+  <div class="inputGroup">
+    <p>
+      <label for="initialInvestment">Investimento inicial (R$)</label>
+      <input type="number" name="initialInvestment" id="initialInvestment" [(ngModel)]="initialInvestment" />
+    </p>
+    <p>
+      <label for="monthlyInvestment">Aporte mensal (R$)</label>
+      <input type="number" name="monthlyInvestment" id="monthlyInvestment" [(ngModel)]="monthlyInvestment" />
+    </p>
+    <p>
+      <label for="interestRate">Taxa de juros (%)</label>
+      <input type="number" name="interestRate" id="interestRate" [(ngModel)]="interestRate" />
+    </p>
+    <p>
+      <label for="duration">Período (anos)</label>
+      <input type="number" name="duration" id="duration" [(ngModel)]="duration" />
+    </p>
+  </div>
 
-    <button type="submit">Calcular</button>
-  </form>
-</section>
+  <button type="submit">Calcular</button>
+</form>

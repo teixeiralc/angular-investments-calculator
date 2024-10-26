@@ -18,7 +18,7 @@ export class InvestmentsInputComponent {
   initialInvestment = signal<number>(100)
   monthlyInvestment = signal<number>(10)
   interestRate = signal<number>(8)
-  duration = signal<number>(1)
+  duration = signal<number>(3)
 
   investmentsData?: Investments
 
@@ -27,7 +27,7 @@ export class InvestmentsInputComponent {
     this.investmentsData = {
       initialInvestment: this.initialInvestment(),
       monthlyInvestment: this.monthlyInvestment(),
-      interesetRate: this.interestRate(),
+      interestRate: this.interestRate(),
       duration: this.duration(),
     }
     this.calculatorService.setInvestmentsData(this.investmentsData)

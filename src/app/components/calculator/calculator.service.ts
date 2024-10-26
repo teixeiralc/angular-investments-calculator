@@ -13,12 +13,18 @@ export class CalculatorService {
   investmentsCalculatedByYear: CalculatedInvestments[] = []
   calculateInvestments() {
     const annualInvestment = this.investmentsData()!.monthlyInvestment * 12
+    const monthlyRate = this.investmentsData()!.interestRate / 100 / 12
     let investmentValue = this.investmentsData()!.initialInvestment
 
     for (let i = 0; i < this.investmentsData()!.duration; i++) {
       const year = i + 1
-      const interestEarnedInYear = investmentValue * (this.investmentsData()!.interesetRate / 100)
-      investmentValue += interestEarnedInYear + annualInvestment
+      const months = 12
+
+      investmentValue =
+        investmentValue * Math.pow(1 + monthlyRate, months) +
+        this.investmentsData()!.monthlyInvestment * ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate)
+
+      const interestEarnedInYear = investmentValue - this.investmentsData()!.initialInvestment - annualInvestment
       const totalInterest = investmentValue - annualInvestment * year - this.investmentsData()!.initialInvestment
       this.investmentsCalculatedByYear.push({
         year: year,

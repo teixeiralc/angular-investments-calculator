@@ -1,6 +1,6 @@
 export default interface Investments {
   initialInvestment: number
   monthlyInvestment: number
-  interesetRate: number
+  interestRate: number
   duration: number
 }
