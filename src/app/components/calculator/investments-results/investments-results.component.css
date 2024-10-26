@@ -1,0 +1,16 @@
+table {
+  /* padding: 1rem; */
+  table-layout: fixed;
+  border-spacing: 1rem;
+  text-align: right;
+}
+
+table thead {
+  font-size: 0.875rem;
+  color: #83e6c0;
+}
+
+table tbody {
+  font-size: 0.85rem;
+  color: #c2e9e0;
+}

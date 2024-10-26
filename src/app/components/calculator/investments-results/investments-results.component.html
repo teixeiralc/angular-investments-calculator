@@ -1,0 +1,20 @@
+<table>
+  <thead>
+    <th scope="col">Ano</th>
+    <th scope="col">Capital investido</th>
+    <th scope="col">Rendimento (ano)</th>
+    <th scope="col">Rendimento total</th>
+    <th scope="col">Valor total</th>
+  </thead>
+  <tbody>
+    @for (investmentsYear of this.calculatedInvestments(); track investmentsYear.year) {
+    <tr>
+      <td>{{ investmentsYear.year }}</td>
+      <td>{{ investmentsYear.totalAmountInvested | currency : 'BRL' }}</td>
+      <td>{{ investmentsYear.interest | currency : 'BRL' }}</td>
+      <td>{{ investmentsYear.totalInterest | currency : 'BRL' }}</td>
+      <td>{{ investmentsYear.valueEndOfYear | currency : 'BRL' }}</td>
+    </tr>
+    }
+  </tbody>
+</table>
