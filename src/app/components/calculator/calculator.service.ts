@@ -6,10 +6,6 @@ import Investments from '../../models/investments'
 export class CalculatorService {
   private investmentsData = signal<Investments | null>(null)
 
-  setInvestmentsData(investmentsData: Investments) {
-    this.investmentsData.set(investmentsData)
-  }
-
   investmentsCalculatedByYear: CalculatedInvestments[] = []
   calculateInvestments() {
     const annualInvestment = this.investmentsData()!.monthlyInvestment * 12
@@ -39,6 +35,10 @@ export class CalculatorService {
         totalAmountInvested: this.investmentsData()!.initialInvestment + annualInvestment * year,
       })
     }
+  }
+
+  setInvestmentsData(investmentsData: Investments) {
+    this.investmentsData.set(investmentsData)
   }
 
   getCalculatedInvestments() {

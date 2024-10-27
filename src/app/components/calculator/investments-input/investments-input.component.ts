@@ -14,8 +14,8 @@ import { CalculatorService } from '../calculator.service'
 export class InvestmentsInputComponent {
   private calculatorService = inject(CalculatorService)
 
-  initialInvestment = signal<number>(100)
-  monthlyInvestment = signal<number>(10)
+  initialInvestment = signal<number>(0)
+  monthlyInvestment = signal<number>(0)
   interestRate = signal<number>(8)
   duration = signal<number>(3)
 
